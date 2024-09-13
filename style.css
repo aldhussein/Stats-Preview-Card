@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+}
+
+.card{
+    width: 70%;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card .left{
+    width: 50%;
+    padding: 40px;
+    background-color:  hsl(244, 38%, 16%);
+}
+
+.left .header{
+    width: 80%;
+    font-size: 24px;
+    color: hsl(0, 0%, 100%);
+    font-family: "Lexend Deca", sans-serif;
+    margin-bottom: 30px;
+}
+
+.left .header span{
+    color: hsl(277, 64%, 61%);
+}
+.left p{
+    font-size: 12px;
+    color:  hsla(0, 0%, 100%, 0.75);
+    width: 70%;
+    margin-bottom: 60px;
+}
+
+.left .about{
+    display: flex;
+    justify-content: space-around;
+}
+
+.left .about .header2{
+    display: flex;
+    flex-direction: column;
+}
+
+.about .header2 h3{
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.about .header2 h4{
+    font-size: 9px;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.card .right{
+    width: 50%;
+    background-image: url('image-header-desktop.jpg');
+    background-color: hsl(277, 64%, 61%);
+    background-blend-mode: multiply;
+}
+
+.attribution h1{
+    color: darkviolet;
+    margin-top: 20px;
+}
+
+.attribution h1 a{
+    text-decoration: none;
+    color: green;
+}
+
+/* mobile view responsive */
+
+@media screen and (max-width: 540px){
+  .card {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+    height: 90vh;
+    overflow: scroll;
+  }
+
+  .card .right{
+    width: 100%;
+    height: 30%;
+    display: block;
+  }
+
+  .card .left {
+    font-size: 8px;
+    padding: 10px;
+    padding-top: 30px;
+    height: 70%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card .left .header{
+    margin-top: 30px;
+   font-size: 26px;
+  }
+
+  .card .left p{
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .card .left .about{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card .left .about .header2{
+    margin-bottom: 30px;
+  }
+  .card .left .about .header2 h3{
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .card .left .about .header2 h4{
+    font-size: 12px;
+  }
+}
